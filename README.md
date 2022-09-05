@@ -1,5 +1,3 @@
-# Spring-Boot-Web-Client-Implementation
-
 # Spring Boot Web Client Implementation
 
 We have many ways to establish microservices communication in spring boot.
