@@ -1,0 +1,5 @@
+package com.web.client.service;
+
+public interface BookService {
+
+}

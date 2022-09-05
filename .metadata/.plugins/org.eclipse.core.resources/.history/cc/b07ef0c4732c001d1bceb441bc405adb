@@ -1,0 +1,3 @@
+server.port=9086
+
+book.client.url=http://localhost:9085

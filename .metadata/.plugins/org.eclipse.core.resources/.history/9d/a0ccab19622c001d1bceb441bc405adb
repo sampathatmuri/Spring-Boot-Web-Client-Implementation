@@ -1,0 +1,8 @@
+package com.web.client.service;
+
+import com.web.client.dto.Book;
+
+public interface BookService {
+
+	Book saveBook(Book book);
+}

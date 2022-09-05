@@ -1,0 +1,18 @@
+package com.web.client.documents;
+
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+import lombok.AllAr
+import lombok.NoArgsConstructor;gsConstructor;
+import lombok.Data;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Document(collection = "Books")
+public class Book {
+
+	@Id
+	private String id;
+}

@@ -1,0 +1,49 @@
+package com.web.client.service;
+
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.MediaType;
+import org.springframework.stereotype.Service;
+import org.springframework.web.reactive.function.client.WebClient;
+
+import com.web.client.dto.Book;
+import com.web.client.util.ReadingConfigurationProperties;
+
+import reactor.core.publisher.Flux;
+import reactor.core.publisher.Mono;
+
+@Service
+public class BookServiceImpl implements BookService {
+
+	private ReadingConfigurationProperties prop;
+
+	private WebClient webClient;
+
+	public BookServiceImpl(WebClient.Builder webClient, ReadingConfigurationProperties prop) {
+		this.prop = prop;
+		this.webClient = webClient.baseUrl(this.prop.getBaseUrl())
+				.defaultHeader(HttpHeaders.CONTENT_TYPE, MediaType.APPLICATION_JSON_VALUE).build();
+
+	}
+
+	@Override
+	public Mono<Book> saveBook(Book book) {
+		return webClient.post().uri("/saveBook").body(Mono.just(book), Book.class).retrieve().bodyToMono(Book.class);
+	}
+
+	@Override
+	public Flux<Book> getAllBooks() {
+		return webClient.get().uri("/getAllBooks").retrieve().bodyToFlux(Book.class);
+	}
+
+	@Override
+	public Mono<Book> getBookById(String id) {
+		return webClient.get().uri("/getBookById/"+id).retrieve().bodyToMono(Book.class);
+	}
+
+	@Override
+	public Mono<Book> deleteBookById(String id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

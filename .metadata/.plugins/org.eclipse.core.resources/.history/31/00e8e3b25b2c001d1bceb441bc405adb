@@ -1,0 +1,9 @@
+package com.web.client.repository;
+
+import org.springframework.data.mongodb.repository.MongoRepository;
+
+import com.web.client.documents.Book;
+
+public interface BookRepository extends MongoRepository<Book,String> {
+
+}

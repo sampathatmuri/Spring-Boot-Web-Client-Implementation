@@ -1,0 +1,3 @@
+server.port=9086
+
+book.producer.url=http://localhost:9085

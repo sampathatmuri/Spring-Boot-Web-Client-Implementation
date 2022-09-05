@@ -1,0 +1,19 @@
+package com.web.client.controller;
+
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.web.client.dto.Book;
+
+import reactor.core.publisher.Mono;
+
+@RestController
+public class BookController {
+	
+	@PostMapping("/saveBook")
+	public Mono<Book> sendCreateBookEventToService(@RequestBody Book book) {
+		
+	}
+
+}

@@ -1,0 +1,5 @@
+package com.web.client.documents;
+
+public class Book {
+
+}

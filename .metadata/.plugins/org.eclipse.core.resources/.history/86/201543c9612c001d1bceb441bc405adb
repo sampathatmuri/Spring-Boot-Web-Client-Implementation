@@ -1,0 +1,5 @@
+package com.web.client.dto;
+
+public class Book {
+
+}

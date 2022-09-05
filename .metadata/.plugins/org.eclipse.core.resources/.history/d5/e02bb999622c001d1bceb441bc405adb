@@ -1,0 +1,38 @@
+package com.web.client.service;
+
+import org.springframework.web.reactive.function.client.WebClient;
+
+import com.web.client.dto.Book;
+
+import reactor.core.publisher.Flux;
+import reactor.core.publisher.Mono;
+
+public class BookServiceImpl implements BookService {
+	
+	private WebClient webClient;
+
+	@Override
+	public Mono<Book> saveBook(Book book) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Flux<Book> getAllBooks() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Mono<Book> getBookById(String id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Mono<Book> deleteBookById(String id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

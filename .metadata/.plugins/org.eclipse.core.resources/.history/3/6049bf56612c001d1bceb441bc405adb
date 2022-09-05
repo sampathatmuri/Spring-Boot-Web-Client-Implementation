@@ -1,0 +1,13 @@
+package com.web.client;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class WebClientProducerApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(WebClientProducerApplication.class, args);
+	}
+
+}

@@ -1,0 +1,29 @@
+package com.web.client.documents;
+
+import javax.validation.constraints.NotBlank;
+
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+@Document(collection = "Books")
+public class Book {
+
+	@Id
+	private String bookId;
+
+	@NotBlank(message = "Please enter book name")
+	private String bookName;
+
+	private String auotherName;
+
+	private float price;
+
+	private float rating;
+}
